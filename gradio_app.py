@@ -2,7 +2,7 @@ import gradio as gr
 from theme_classifier import ThemeClassifier
 
 def get_themes(theme_list, subtitles_path, save_path):
-    theme_list = theme_list.str.spilt(',')
+    theme_list = theme_list.spilt(',')
     theme_classifier = ThemeClassifier(theme_list)
     output_df = theme_classifier.get_themes(subtitles_path,save_path)
 
